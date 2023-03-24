@@ -9,18 +9,10 @@ class StringTests {
 	@Test
 	void testCharAt() {
 		
-		  String str = "Hello world!";
-		   char exepted1 = 'H';
-		   char exepted2 = ' ';
-		   char exepted3 = '!';
-		       
-		   char actual1 = str.charAt(0);
-		   char actual2 = str.charAt(5);
-		   char actual3 = str.charAt(str.length()-1);
+		 assertEquals('J',"Java".charAt(0));
+		 assertEquals('a',"Java".charAt(3));
+		
 		   
-		   assertEquals (exepted1,actual1);
-		   assertEquals (exepted2,actual2);
-		   assertEquals (exepted3,actual3);
 		
 		    }
 
@@ -47,6 +39,7 @@ class StringTests {
 	assertTrue (myStr1.compareToIgnoreCase(myStr2)==0);
 	assertTrue (myStr2.compareToIgnoreCase(myStr3)>0);
 	assertTrue (myStr3.compareToIgnoreCase(myStr1)<0);
+	assertEquals(0,"Hello".compareToIgnoreCase("hello"));
 	}
 
 	@Test
@@ -57,6 +50,7 @@ class StringTests {
 		
 		String actual = Name.concat(" ").concat(LastName);
 		assertEquals(exepted,actual);
+		
 	}
 
 	@Test
@@ -64,6 +58,7 @@ class StringTests {
 		String myStr = "Ferrari";
 		assertTrue(myStr.startsWith("Ferrari"));
 		assertFalse(myStr.startsWith("rrari"));
+		assertTrue(myStr.startsWith(""));
 	}
 
 	@Test
@@ -71,6 +66,7 @@ class StringTests {
 		String myStr = "Ferrari";
 		assertTrue(myStr.endsWith("i"));
 		assertFalse(myStr.endsWith("Fer"));
+		assertTrue(myStr.endsWith(""));
 	}
 
 	@Test
