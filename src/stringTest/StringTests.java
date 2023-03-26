@@ -76,5 +76,19 @@ class StringTests {
 		assertTrue(myStr.contains("lv"));
 		assertFalse(myStr.contains("Volwo"));
 	}
+	@Test
+	void testLastIndexOf() {
+		assertEquals (0,"lacoste".lastIndexOf("l"));
+		assertEquals (2,"lacoste".lastIndexOf("c",5));
+		assertEquals (5,"lacoste".lastIndexOf("t",6));
+		
+	}
+	@Test
+	void testIndexOf() {
+		assertEquals (0,"chanel".indexOf("cha"));
+		assertEquals (-1,"chanel".indexOf("Cha"));
+		assertEquals (3,"chanel".indexOf("nel",2));
+		
+	}
 
 }
